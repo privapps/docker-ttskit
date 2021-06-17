@@ -1,0 +1,16 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: privapps/docker-ttskit@main
+        with:
+          text: '1'
+          content: './out.wav'
+      - run: ls -l

@@ -1,0 +1,22 @@
+# action.yml
+name: 'TTSKIT'
+description: 'Generate Chinese Mandarin voice from text'
+inputs:
+  text:  # id of input
+    description: 'What text?'
+    required: true
+    default: 'World'
+  voice:  # id of input
+    description: 'What Voice'
+    required: false
+    default: '24'
+  content: # id of output
+    required: false
+    description: 'path that wave binary save to'
+    default: './__out__.wav'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.text }}
+    - ${{ inputs.voice }}
