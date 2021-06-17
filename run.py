@@ -5,7 +5,9 @@
 # File: /workspace/__voice__.txt is optional with number only, which indicate which voice to use
 # File: /workspace/__out__.wav is the one will be generated
 ##############################################                                                                                                                                                            
-import ttskit, sys, os
+import ttskit, sys, os, warnings
+
+warnings.filterwarnings('ignore')
 
 text = os.environ["INPUT_TEXT"]
 voice = os.environ["INPUT_VOICE"]
@@ -15,10 +17,8 @@ def getVoice(default_val = 24) -> int:
     try:
         num = int(voice)
         return num if num > 0 and num <= 30 else default_val
-        return num
     except Exception:
         return default_val
-
 		
 wav=ttskit.tts(text,audio=str(getVoice()))
 

@@ -1,18 +1,21 @@
 ## What
-这是拥有最基本 [ttskit](https://github.com/KuangDD/ttskit)功能的 docker image
+这是拥有最基本 [ttskit](https://github.com/KuangDD/ttskit)功能的,联合 GitHub Action 的插件
 
 ## Why
-ttskit语音生成的效果不错，但是有很多第三方库，还有一些训练过的数据。如果是一台新机器，需要很长时间下载，设置。这里把所有打包好了，可以拿起来马上用
+ttskit语音生成的效果不错，但是有很多第三方库，还有一些训练过的数据。如果是一台新机器，需要很长时间下载，设置。我想改造一下，能在 github workflow / action 上用
 
 ## Usage
 ```
-echo "需要转换的文字" > __input__.txt
-echo 17 > __voice__.txt
-docker run --rm -v .:/workspace privapps/ttskit
-
-# out put should at __out__.wav
+jobs:
+  job:
+    steps:
+      - uses: privapps/docker-ttskit@action
+        with:
+          text: '需要转换的文字'
+          voice: '13'
+          content: '输出 wave 的路径'
 ```
-其中 `__voice__.txt` 是可选项，里面是语音的ID，具体一共有30个不同的语音
+Voice 具体一共有30个不同的语音
 ```
 {
     1: 'Aibao', 2: 'Aicheng', 3: 'Aida', 4: 'Aijia', 5: 'Aijing',
@@ -23,4 +26,4 @@ docker run --rm -v .:/workspace privapps/ttskit
     26: 'cctvfb', 27: 'cctvma', 28: 'cctvmb', 29: 'cctvmc', 30: 'cctvmd'
 }
 ```
-部分演示可以在[这里找到小样](https://github.com/KuangDD/zhrtvc/tree/master/data/files/examples)
+部分可以在[这里找到小样](https://github.com/KuangDD/zhrtvc/tree/master/data/files/examples)
