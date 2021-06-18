@@ -27,3 +27,7 @@ Voice 具体一共有30个不同的语音
 }
 ```
 部分可以在[这里找到小样](https://github.com/KuangDD/zhrtvc/tree/master/data/files/examples)
+
+### 相关项目
+ * [TTSKIT](https://github.com/KuangDD/ttskit)
+ * [TTSKIT for docker](https://github.com/privapps/docker-ttskit/tree/main)
