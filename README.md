@@ -24,3 +24,7 @@ docker run --rm -v .:/workspace privapps/ttskit
 }
 ```
 部分演示可以在[这里找到小样](https://github.com/KuangDD/zhrtvc/tree/master/data/files/examples)
+
+### 相关项目
+ * [TTSKIT](https://github.com/KuangDD/ttskit)
+ * [TTSKIT for Github Action](https://github.com/privapps/docker-ttskit/tree/action)
