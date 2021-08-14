@@ -1,3 +1,8 @@
+# WARNINGING / 注意 !!!
+### 因为 ttskit 作者将原基础项目删除了，本项目因此 也不能用，也无法维护了，请使用 [TTS-Mainderin](https://github.com/privapps/TTS-Manderin)
+### Due to the author of ttskit delete the base project. This project is not working and is not able to maintain. Please use [TTS-Mainderin](https://github.com/privapps/TTS-Manderin)
+
+
 ## What
 提供中文文字转语音(Text To Speech / TTS) 的库/软件
 这是拥有最基本 [ttskit](https://github.com/KuangDD/ttskit) 功能的 衍生 包括
